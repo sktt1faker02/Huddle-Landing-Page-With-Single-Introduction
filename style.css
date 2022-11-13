@@ -77,9 +77,15 @@ button {
   color: var(--violet);
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   margin-bottom: 3.5rem;
+  cursor: pointer;
 }
 .social-icon {
   margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: var(--soft-magenta);
+  color: #fff;
 }
 
 .fa-brands {
@@ -94,14 +100,24 @@ button {
   margin-right: 0.5rem;
 }
 
+.fa-brands:hover {
+  color: #ff52c1;
+  border-color: #ff52c1;
+}
+
 @media (min-width: 1024px) {
   main {
     background-image: url(./images/bg-desktop.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-size: auto;
+    background-position: 40% 40%;
     background-color: var(--violet);
     min-height: 100vh;
     padding: 2rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.875rem, calc(1.625rem + 0.77vw), 2.25rem);
   }
 
   .hero-description {
@@ -115,7 +131,7 @@ button {
   }
 
   main img:nth-of-type(2) {
-    max-width: 40rem;
+    max-width: 45rem;
     margin-bottom: unset;
     align-self: flex-start;
   }
@@ -132,6 +148,7 @@ button {
 
   main p {
     text-align: left;
+    font-size: clamp(1.125rem, calc(1.33rem + -0.26vw), 1.25rem);
   }
 
   .hero-description {
@@ -139,7 +156,8 @@ button {
   }
 
   button {
-    padding: 0.7rem 3rem;
+    padding: 1rem 3rem;
+    font-size: clamp(1.125rem, calc(1.33rem + -0.26vw), 1.25rem);
   }
 
   .fa-brands {
